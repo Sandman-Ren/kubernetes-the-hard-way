@@ -1,0 +1,28 @@
+#cloud-config
+#
+# Cloud-init applied to every machine launched by provision.sh.
+#
+# Kubernetes The Hard Way drives all the cluster machines over SSH as the
+# "root" user from the jumpbox. A stock cloud image disables root SSH login,
+# so the only thing we need to do at first boot is re-enable it. The actual
+# root public key is distributed by provision.sh after the VMs are up.
+#
+# We deliberately keep password authentication OFF; access is key-only.
+
+ssh_pwauth: false
+disable_root: false
+
+write_files:
+  - path: /etc/ssh/sshd_config.d/99-kthw.conf
+    permissions: '0644'
+    content: |
+      # Enable root login over SSH for Kubernetes The Hard Way.
+      PermitRootLogin prohibit-password
+      PubkeyAuthentication yes
+      PasswordAuthentication no
+
+runcmd:
+  - install -d -m 0700 -o root -g root /root/.ssh
+  - touch /root/.ssh/authorized_keys
+  - chmod 0600 /root/.ssh/authorized_keys
+  - systemctl restart ssh || systemctl restart sshd
