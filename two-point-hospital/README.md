@@ -25,6 +25,14 @@ smoothed over.
 | 10 | [General Strategy & Meta Guide](10-general-strategy.md) | The distilled playbook: GP throughput doctrine, layout, economy, staffing meta, reputation & cure-rate management, community cheese tactics, checklists |
 | 11 | [Progression & Unlocks](11-progression-and-unlocks.md) | Career structure, hospital unlock chain, what each level introduces, DLC/free-update timeline, Kudosh economy |
 
+## Presentation layer
+
+`compendium.html` is a self-contained, searchable single-page front-end over
+these documents (sidebar navigation, illness quick-lookup across all 278
+entries, per-section table filters, light/dark themes). Open it directly in a
+browser. It is generated from the markdown by `build_compendium.py` — rerun
+that script after editing any document to refresh the page.
+
 ## Quick orientation
 
 New to the game? Read **01** then **10**. Stuck on a specific map? Jump to
