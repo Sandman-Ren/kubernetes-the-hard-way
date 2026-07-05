@@ -27,7 +27,7 @@ Every illness maps to exactly one treatment room. The rooms fall into three broa
 |---|---|---|---|
 | Multi-illness treatment rooms | Pharmacy (41), Ward (37), Injection Room (33), Fracture Ward (31) | Nurse | 142 |
 | Qualified-specialist rooms | Psychiatry (36), Surgery (33), DNA Lab (29) | Doctor with the matching qualification (Surgery also needs a Nurse) | 98 |
-| Machine / specialty clinics | 30 one-off rooms, from the base game's De-Lux Clinic and Pans Lab to DLC rooms like Cryptology, the Clown Clinic and Toad Hall | Doctor or Nurse at a bespoke machine | 38 |
+| Machine / specialty clinics | 29 one-off rooms, from the base game's De-Lux Clinic and Pans Lab to DLC rooms like Cryptology, the Clown Clinic and Toad Hall | Doctor or Nurse at a bespoke machine | 38 |
 
 The machine clinics are the money-makers: each cures one illness family (usually visual), must be researched or unlocked on a specific level, and charges the highest prices in the game.
 
